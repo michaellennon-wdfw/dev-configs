@@ -6,6 +6,8 @@ This repo contains my personal development configs for various tools and languag
 
 ### Custom Prompt
 
+<img width="146" height="21" alt="image" src="https://github.com/user-attachments/assets/417531dc-999b-43d4-8e1a-4528ba29c178" />
+
 #### `.zshrc-custom-prompt`
 
 A clean, informative prompt that shows exactly what you need to know at a glance:
@@ -22,6 +24,8 @@ A clean, informative prompt that shows exactly what you need to know at a glance
 **Under the hood:** Uses helper functions for Git and venv detection, hooks into Zsh's `precmd` for dynamic updates, and only shows SSH info when you actually need it.
 
 ### Custom Welcome
+
+<img width="313" height="168" alt="image" src="https://github.com/user-attachments/assets/2f2b6afe-8aba-4f58-aa5a-408266d868ec" />
 
 #### `.zshrc-custom-welcome`
 
