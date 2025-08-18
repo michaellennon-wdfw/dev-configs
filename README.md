@@ -57,9 +57,9 @@ Add these lines to your `~/.zshrc`:
 
 ```bash
 # Source custom configurations
-source ~/path/to/dev-configs/.zsh-aliases
-source ~/path/to/dev-configs/.zsh-welcome
-source ~/path/to/dev-configs/.zsh-prompt
+source ~/path/to/dev-configs/zsh/.zsh-aliases
+source ~/path/to/dev-configs/zsh/.zsh-welcome
+source ~/path/to/dev-configs/zsh/.zsh-prompt
 ```
 
 Replace `~/path/to/dev-configs/` with the actual path to your config files.
