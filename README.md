@@ -53,7 +53,7 @@ Open `~/.zshrc` and paste file contents in this order:
 
 #### Option 2: Source files directly
 
-Add these lines to your `~/.zshrc`:
+Clone this repo and add these lines to your `~/.zshrc`:
 
 ```bash
 # Source custom configurations
