@@ -1,8 +1,14 @@
 # --- simple, colored prompt with venv, git, SSH user@host when applicable ---
+# Format: "%time [user@host] path git_branch[*] (venv) ❯"
+# - Shows user@host only over SSH.
+# - Appends "*" to git branch when the repo is dirty (staged or unstaged changes).
+# - Always shows a green caret; color does not reflect exit status.
 # Helpers
+# Prints (venvname) when a Python virtualenv is active
 prompt_venv() {
   [[ -n "$VIRTUAL_ENV" ]]       && echo "($(basename "$VIRTUAL_ENV"))"
 }
+# Prints the current git branch or tag; appends "*" if the working tree is dirty
 prompt_git() {
   command -v git >/dev/null || return
   git rev-parse --is-inside-work-tree >/dev/null 2>&1 || return
@@ -22,6 +28,7 @@ SSH_PART=''
 # Left prompt: [SSH user@host] path git venv then green caret
 autoload -Uz add-zsh-hook
 
+# Recompute PROMPT before each command via precmd hook
 build_prompt() {
 	local -a segs
 	segs+=('%F{244}%*%f')

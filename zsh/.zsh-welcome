@@ -1,4 +1,9 @@
 # --- Welcome banner ---
+# Prints a friendly banner once per interactive shell.
+# - Chooses ASCII art and color based on time of day
+# - Shows Node and Python versions when available
+# Set `user_name` below to override the greeting name.
+# To disable, skip sourcing this file or unset `_WELCOME_PRINTED`.
 if [[ $- == *i* ]]; then
   _welcome_banner() {
 
@@ -70,7 +75,7 @@ ART
  / O o_.-`\
 |o_.-`  o  |
 \     o_.-/
-  `'--.__.'
+ `'--.__.'
 ART
         ;;
       *)
@@ -82,9 +87,9 @@ ART
     print -P "%f"
 
     # Lines
-    print -P "%B%F{$art_color}Good ${part}, ${user_name}.%b It's ${today}."
+    print -P "%B%F{$art_color}Good ${part}, ${user_name}.%f%b It's ${today}."
     print
-    print -P "%F{blue}Current Environment%f"
+    print -P "%F{magenta}Current Environment%f"
     print -P " - %F{green}Node%f ${nodev}"
     print -P " - %F{green}Python%f ${pyv}"
 
